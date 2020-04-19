@@ -17,7 +17,9 @@ public class TutorialMod
 {
     private static final Logger LOGGER = LogManager.getLogger();
     
-    public static final String mod_id = "tutorialmod";
+    public static final String MOD_ID = "tutorialmod";
+    
+    public static TutorialMod instance;
 
     public TutorialMod() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -25,6 +27,8 @@ public class TutorialMod
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         MinecraftForge.EVENT_BUS.register(this);
+        
+        instance = this;
     }
 
     private void setup(final FMLCommonSetupEvent event){

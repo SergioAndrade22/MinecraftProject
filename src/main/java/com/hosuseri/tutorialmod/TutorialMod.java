@@ -1,6 +1,9 @@
 package com.hosuseri.tutorialmod;
 
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -10,7 +13,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.stream.Collectors;
+import com.hosuseri.tutorialmod.init.ItemInit;
 
 @Mod("tutorialmod")
 public class TutorialMod
@@ -22,9 +25,9 @@ public class TutorialMod
     public static TutorialMod instance;
 
     public TutorialMod() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+    	final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        modEventBus.addListener(this::setup);
+        modEventBus.addListener(this::doClientStuff);
 
         MinecraftForge.EVENT_BUS.register(this);
         
@@ -42,5 +45,21 @@ public class TutorialMod
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
     	
+    }
+    
+    public void log(String msg) {
+    	LOGGER.debug(msg);
+    }
+    
+    public static class TutorialItemGroup extends ItemGroup{
+    	public static final TutorialItemGroup instance = new TutorialItemGroup(ItemGroup.GROUPS.length, "aquatic_world_tab"); 
+    	
+    	private TutorialItemGroup(int index, String label) {
+    		super(index, label);
+    	}
+    	
+    	public ItemStack createIcon() {
+    		return new ItemStack(ItemInit.aquamarine_item);
+    	}
     }
 }

@@ -1,4 +1,8 @@
 {
-	"item.tutorialmod.example_item": "Tutorial Item",
-	"item.tutorialmod.fructus_mare": "Fructus mare"
+	"itemGroup.aquatic_world_tab": "Aquatic World",
+
+	"item.tutorialmod.aquamarine_item": "Aquamarine",
+	"item.tutorialmod.fructus_mare": "Fructus mare",
+	
+	"block.tutorialmod.aquamarine_block": "Aquamarine Block"
 }

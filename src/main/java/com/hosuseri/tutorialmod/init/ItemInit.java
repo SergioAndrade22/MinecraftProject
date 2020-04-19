@@ -1,6 +1,5 @@
 package com.hosuseri.tutorialmod.init;
 
-import java.util.function.Supplier;
 import com.hosuseri.tutorialmod.TutorialMod;
 import com.hosuseri.tutorialmod.TutorialMod.TutorialItemGroup;
 
@@ -8,7 +7,6 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
-import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraftforge.event.RegistryEvent;
@@ -35,12 +33,11 @@ public class ItemInit {
 		event.getRegistry().register(aquamarine_item); //the name here needs to be exactly equal to the name of the variable
 		
 		Item.Properties fructus_mare_properties = new Item.Properties();
-		fructus_mare_properties.group(TutorialItemGroup.instance);
+		fructus_mare_properties.group(TutorialItemGroup.instance);		
 		
-		EffectSupplier<EffectInstance> wb_supp = new EffectSupplier<EffectInstance>(Effects.WATER_BREATHING);
-		EffectSupplier<EffectInstance> nv_supp = new EffectSupplier<EffectInstance>(Effects.NIGHT_VISION);
-		EffectSupplier<EffectInstance> dg_supp = new EffectSupplier<EffectInstance>(Effects.DOLPHINS_GRACE);
-		fructus_mare_properties.food(new Food.Builder().hunger(6).fastToEat().saturation(3.0f).setAlwaysEdible().effect(wb_supp, 1.0f).effect(nv_supp, 1.0f).effect(dg_supp, 1.0f).build());
+		Food.Builder builder = createBuilder();		
+		
+		fructus_mare_properties.food(builder.build());
 		
 		Item fructus_mare_item = new Item(fructus_mare_properties);
 		fructus_mare_item.setRegistryName("fructus_mare");
@@ -49,16 +46,20 @@ public class ItemInit {
 		TutorialMod.instance.log("Finish item registry");
 	}
 	
-	public static class EffectSupplier<E extends EffectInstance> implements Supplier<EffectInstance>{
-		private Effect desired_effect = null;
+	private static Food.Builder createBuilder(){
+		Food.Builder builder = new Food.Builder();
+
+		EffectSupplier<EffectInstance> wb_supp = new EffectSupplier<EffectInstance>(Effects.WATER_BREATHING, 4800, 5);
+		EffectSupplier<EffectInstance> nv_supp = new EffectSupplier<EffectInstance>(Effects.NIGHT_VISION, 4800, 5);
+		EffectSupplier<EffectInstance> dg_supp = new EffectSupplier<EffectInstance>(Effects.DOLPHINS_GRACE, 4800, 5);
 		
-		public EffectSupplier(Effect de){
-			super();
-			desired_effect = de;
-		}
-		
-		public EffectInstance get() {
-			return new EffectInstance(desired_effect, 4800, 5);
-		}
+		builder = builder.hunger(6);
+		builder = builder.fastToEat();
+		builder = builder.saturation(3.0f);
+		builder = builder.setAlwaysEdible();
+		builder = builder.effect(wb_supp, 1.0f);
+		builder = builder.effect(nv_supp, 1.0f);
+		builder = builder.effect(dg_supp, 1.0f);
+		return builder;
 	}
 }

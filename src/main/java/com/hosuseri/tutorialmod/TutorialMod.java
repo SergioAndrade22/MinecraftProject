@@ -13,7 +13,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.hosuseri.tutorialmod.init.ItemInit;
+import com.hosuseri.tutorialmod.init.BlockInit;
 
 @Mod("tutorialmod")
 public class TutorialMod
@@ -47,7 +47,7 @@ public class TutorialMod
     	
     }
     
-    public void log(String msg) {
+    public static void log(String msg) {
     	LOGGER.debug(msg);
     }
     
@@ -59,7 +59,7 @@ public class TutorialMod
     	}
     	
     	public ItemStack createIcon() {
-    		return new ItemStack(ItemInit.aquamarine_item);
+    		return new ItemStack(BlockInit.aquamarine_block);
     	}
     }
 }

@@ -18,10 +18,11 @@ import net.minecraftforge.common.ToolType;
 @Mod.EventBusSubscriber(modid = TutorialMod.MOD_ID, bus= Bus.MOD)
 public class BlockInit {
 	public static final Block aquamarine_block = null;
+	public static final BlockItem aquamarine_block_item = null;
 	
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) { // for every block you register you also need to register the item for it
-		TutorialMod.instance.log("Begin blocks Registy");
+		TutorialMod.log("Begin blocks Registy");
 		
 		Block.Properties props = Block.Properties.create(Material.IRON);
 		props.hardnessAndResistance(7f, 15.0f);
@@ -33,12 +34,12 @@ public class BlockInit {
 		
 		event.getRegistry().register(to_reg);
 		
-		TutorialMod.instance.log("Finish blocks Registry");
+		TutorialMod.log("Finish blocks Registry");
 	}
 	
 	@SubscribeEvent
 	public static void registerBlockItems(final RegistryEvent.Register<Item> event) {
-		TutorialMod.instance.log("Begin blocks Registy");
+		TutorialMod.log("Begin blocks Registy");
 		
 		Item.Properties props = new Item.Properties();
 		props.maxStackSize(16);
@@ -49,6 +50,6 @@ public class BlockInit {
 		
 		event.getRegistry().register(to_reg);
 		
-		TutorialMod.instance.log("Finish blocks Registry");
+		TutorialMod.log("Finish blocks Registry");
 	}
 }

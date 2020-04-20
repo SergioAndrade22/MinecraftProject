@@ -7,6 +7,7 @@ import com.hosuseri.aquaticworld.AquaticWorld;
 import com.hosuseri.aquaticworld.util.EffectSupplier;
 import com.hosuseri.aquaticworld.util.LogClass;
 import com.hosuseri.aquaticworld.util.TutorialItemGroup;
+import com.hosuseri.aquaticworld.item.items.*;
 
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.Food;
@@ -26,6 +27,7 @@ import net.minecraftforge.fml.common.Mod;
 public class ItemInit {	
 	public static Item aquamarine = null;
 	public static Item fructus_mare = null;
+	public static Item poseidon_trident = null;
 
 	public static Item aquamarine_sword = null;
 	public static Item aquamarine_pickaxe = null;
@@ -64,6 +66,14 @@ public class ItemInit {
 		fructus_mare.setRegistryName("fructus_mare");
 		
 		event.getRegistry().register(fructus_mare);
+		
+		Item.Properties poseidon_trident_props = new Item.Properties();
+		poseidon_trident_props.group(TutorialItemGroup.instance);
+		
+		poseidon_trident = new PoseidonTrident(poseidon_trident_props);
+		poseidon_trident.setRegistryName("poseidon_trident");
+		
+		event.getRegistry().register(poseidon_trident);
 	}
 	
 	private static void toolRegistry(final RegistryEvent.Register<Item> event) {	

@@ -17,8 +17,8 @@ import net.minecraftforge.common.ToolType;
 @ObjectHolder(TutorialMod.MOD_ID)
 @Mod.EventBusSubscriber(modid = TutorialMod.MOD_ID, bus= Bus.MOD)
 public class BlockInit {
-	public static final Block aquamarine_block = null;
-	public static final BlockItem aquamarine_block_item = null;
+	public static Block aquamarine_block = null;
+	public static BlockItem aquamarine_block_item = null;
 	
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) { // for every block you register you also need to register the item for it
@@ -29,10 +29,10 @@ public class BlockInit {
 		props.sound(SoundType.METAL);
 		props.harvestTool(ToolType.PICKAXE);
 		props.harvestLevel(3);
-		Block to_reg = new Block(props);
-		to_reg.setRegistryName("aquamarine_block");
+		aquamarine_block = new Block(props);
+		aquamarine_block.setRegistryName("aquamarine_block");
 		
-		event.getRegistry().register(to_reg);
+		event.getRegistry().register(aquamarine_block);
 		
 		TutorialMod.log("Finish blocks Registry");
 	}
@@ -43,12 +43,12 @@ public class BlockInit {
 		
 		Item.Properties props = new Item.Properties();
 		props.maxStackSize(16);
-		props.group(TutorialMod.TutorialItemGroup.instance);
+		props.group(TutorialItemGroup.instance);
 		
-		BlockItem to_reg = new BlockItem(aquamarine_block, props);
-		to_reg.setRegistryName("aquamarine_block"); 
+		aquamarine_block_item = new BlockItem(aquamarine_block, props);
+		aquamarine_block_item.setRegistryName("aquamarine_block"); 
 		
-		event.getRegistry().register(to_reg);
+		event.getRegistry().register(aquamarine_block_item);
 		
 		TutorialMod.log("Finish blocks Registry");
 	}

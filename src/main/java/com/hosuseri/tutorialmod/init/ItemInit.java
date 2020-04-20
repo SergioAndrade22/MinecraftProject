@@ -1,12 +1,16 @@
 package com.hosuseri.tutorialmod.init;
 
 import com.hosuseri.tutorialmod.TutorialMod;
-import com.hosuseri.tutorialmod.TutorialMod.TutorialItemGroup;
 
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.Food;
+import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.ShovelItem;
+import net.minecraft.item.SwordItem;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraftforge.event.RegistryEvent;
@@ -18,11 +22,25 @@ import net.minecraftforge.fml.common.Mod;
 public class ItemInit {	
 	public static Item aquamarine = null;
 	public static Item fructus_mare = null;
+
+	public static Item aquamarine_sword = null;
+	public static Item aquamarine_pickaxe = null;
+	public static Item aquamarine_shovel = null;
+	public static Item aquamarine_hoe = null;
+	public static Item aquamarine_axe = null;
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
 		TutorialMod.log("Begin item registry");
 		
+		itemRegistry(event);
+		
+		toolRegistry(event);
+		
+		TutorialMod.log("Finish item registry");
+	}
+	
+	private static void itemRegistry(final RegistryEvent.Register<Item> event) {
 		Item.Properties aquamarine_props = new Item.Properties();
 		aquamarine_props.group(TutorialItemGroup.instance);
 		aquamarine_props.maxStackSize(16);
@@ -42,7 +60,32 @@ public class ItemInit {
 		fructus_mare.setRegistryName("fructus_mare");
 		
 		event.getRegistry().register(fructus_mare);
-		TutorialMod.log("Finish item registry");
+	}
+	
+	private static void toolRegistry(final RegistryEvent.Register<Item> event) {	
+		Item.Properties tool_props = new Item.Properties();
+		tool_props.group(TutorialItemGroup.instance);
+		tool_props.maxStackSize(1);
+		
+		aquamarine_sword = new SwordItem(ModItemTier.AQUAMARINE, 8, -1.5f, tool_props);
+		aquamarine_sword.setRegistryName("aquamarine_sword");
+		event.getRegistry().register(aquamarine_sword);
+		
+		aquamarine_shovel = new ShovelItem(ModItemTier.AQUAMARINE, 0, -3.2f, tool_props);
+		aquamarine_shovel.setRegistryName("aquamarine_shovel");
+		event.getRegistry().register(aquamarine_shovel);
+		
+		aquamarine_pickaxe = new PickaxeItem(ModItemTier.AQUAMARINE, 0, -3.2f, tool_props);
+		aquamarine_pickaxe.setRegistryName("aquamarine_pickaxe");
+		event.getRegistry().register(aquamarine_pickaxe);
+		
+		aquamarine_hoe = new HoeItem(ModItemTier.AQUAMARINE, -3.2f, tool_props);
+		aquamarine_hoe.setRegistryName("aquamarine_hoe");
+		event.getRegistry().register(aquamarine_hoe);
+		
+		aquamarine_axe = new AxeItem(ModItemTier.AQUAMARINE, 11, -2.25f, tool_props);
+		aquamarine_axe.setRegistryName("aquamarine_axe");
+		event.getRegistry().register(aquamarine_axe);
 	}
 	
 	private static Food.Builder createBuilder(){

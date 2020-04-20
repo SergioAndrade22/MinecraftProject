@@ -18,7 +18,7 @@ public class AquaticWorld
     
     public static final String MOD_ID = "aquaticworld";
     
-    public static AquaticWorld instance;
+//    public static AquaticWorld instance;
 
     public AquaticWorld() {
     	final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -27,7 +27,7 @@ public class AquaticWorld
 
         MinecraftForge.EVENT_BUS.register(this);
         
-        instance = this;
+      //  instance = this;
     }
 
     private void setup(final FMLCommonSetupEvent event){

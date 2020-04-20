@@ -1,4 +1,6 @@
-package com.hosuseri.aquaticworld.init;
+package com.hosuseri.aquaticworld.util;
+
+import com.hosuseri.aquaticworld.block.BlockInit;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

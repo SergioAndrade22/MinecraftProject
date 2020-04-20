@@ -1,9 +1,11 @@
-package com.hosuseri.aquaticworld.init;
+package com.hosuseri.aquaticworld.item;
 
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
 
 import com.hosuseri.aquaticworld.AquaticWorld;
+import com.hosuseri.aquaticworld.util.EffectSupplier;
+import com.hosuseri.aquaticworld.util.TutorialItemGroup;
 
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.Food;

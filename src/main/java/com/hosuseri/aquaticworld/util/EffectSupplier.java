@@ -1,11 +1,11 @@
-package com.hosuseri.aquaticworld.init;
+package com.hosuseri.aquaticworld.util;
 
 import java.util.function.Supplier;
 
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 
-class EffectSupplier<E extends EffectInstance> implements Supplier<EffectInstance>{
+public class EffectSupplier<E extends EffectInstance> implements Supplier<EffectInstance>{
 	private Effect desired_effect = null;
 	private int duration = 0;
 	private int level = 0; 

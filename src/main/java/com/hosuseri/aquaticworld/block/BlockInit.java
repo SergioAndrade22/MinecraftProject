@@ -1,9 +1,10 @@
-package com.hosuseri.aquaticworld.init;
+package com.hosuseri.aquaticworld.block;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 
 import com.hosuseri.aquaticworld.AquaticWorld;
+import com.hosuseri.aquaticworld.util.TutorialItemGroup;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;

@@ -1,39 +1,279 @@
 {
+  "minecraft:recipes/building_blocks/light_blue_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
   "minecraft:recipes/food/cooked_mutton_from_campfire_cooking": {
     "criteria": {
-      "has_mutton": "2020-04-20 07:14:23 -0300"
+      "has_mutton": "2020-04-20 07:54:23 -0300"
     },
     "done": true
   },
-  "minecraft:recipes/food/cooked_mutton": {
+  "minecraft:recipes/tools/stone_shovel": {
     "criteria": {
-      "has_mutton": "2020-04-20 07:14:23 -0300"
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/chest": {
+  "minecraft:recipes/building_blocks/purple_wool": {
     "criteria": {
-      "has_lots_of_items": "2020-04-20 07:15:03 -0300"
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
     },
     "done": true
   },
-  "minecraft:adventure/root": {
+  "minecraft:recipes/building_blocks/oak_planks": {
     "criteria": {
-      "killed_something": "2020-04-20 07:14:07 -0300"
+      "has_log": "2020-04-20 07:54:08 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_hoe": {
+    "criteria": {
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/lime_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/lever": {
+    "criteria": {
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/pink_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_stairs_from_cobblestone_stonecutting": {
+    "criteria": {
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/gray_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_ingot": {
+    "criteria": {
+      "has_iron_ore": "2020-04-20 07:53:42 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/black_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/blue_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/white_bed": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/green_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_stone": {
+    "criteria": {
+      "get_stone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone": {
+    "criteria": {
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_slab": {
+    "criteria": {
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/white_carpet": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/furnace": {
+    "criteria": {
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/brown_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_mutton_from_smoking": {
     "criteria": {
-      "has_mutton": "2020-04-20 07:14:23 -0300"
+      "has_mutton": "2020-04-20 07:54:23 -0300"
     },
     "done": true
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:plains": "2020-04-20 07:12:49 -0300"
+      "minecraft:plains": "2020-04-20 07:53:08 -0300"
     },
     "done": false
+  },
+  "minecraft:recipes/building_blocks/cobblestone_stairs": {
+    "criteria": {
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/magenta_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2020-04-20 07:54:08 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/orange_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_slab_from_cobblestone_stonecutting": {
+    "criteria": {
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2020-04-20 07:53:30 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/stone_sword": {
+    "criteria": {
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/painting": {
+    "criteria": {
+      "has_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cobblestone_wall": {
+    "criteria": {
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_wood": {
+    "criteria": {
+      "has_log": "2020-04-20 07:54:08 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/light_gray_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/red_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/white_banner": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_pickaxe": {
+    "criteria": {
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cyan_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_axe": {
+    "criteria": {
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/yellow_wool": {
+    "criteria": {
+      "has_white_wool": "2020-04-20 07:54:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_mutton": {
+    "criteria": {
+      "has_mutton": "2020-04-20 07:54:23 -0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2020-04-20 07:54:22 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_ingot_from_blasting": {
+    "criteria": {
+      "has_iron_ore": "2020-04-20 07:53:42 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cobblestone_wall_from_cobblestone_stonecutting": {
+    "criteria": {
+      "has_cobblestone": "2020-04-20 07:53:44 -0300"
+    },
+    "done": true
   },
   "DataVersion": 2230
 }

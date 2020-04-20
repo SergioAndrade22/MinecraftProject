@@ -1,4 +1,4 @@
-package com.hosuseri.aquaticworld.init;
+package com.hosuseri.aquaticworld.item;
 
 import java.util.function.Supplier;
 

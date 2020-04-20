@@ -1,0 +1,14 @@
+{
+	"itemGroup.aquatic_world_tab": "Aquatic World",
+
+	"item.aquaticworld.aquamarine": "Aquamarine",
+	"item.aquaticworld.fructus_mare": "Fructus mare",
+	
+	"item.aquaticworld.aquamarine_sword": "Aquamarine Sword",
+	"item.aquaticworld.aquamarine_shovel": "Aquamarine Shovel",
+	"item.aquaticworld.aquamarine_hoe": "Aquamarine Hoe",
+	"item.aquaticworld.aquamarine_axe": "Aquamarine Axe",
+	"item.aquaticworld.aquamarine_pickaxe": "Aquamarine Pickaxe",
+	
+	"block.aquaticworld.aquamarine_block": "Aquamarine Block"
+}

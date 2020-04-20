@@ -11,13 +11,13 @@ issueTrackerURL="http://my.issue.tracker/" #optional
 [[mods]] #mandatory
 
 # The modid of the mod
-modId="tutorialmod" #mandatory
+modId="aquaticworld" #mandatory
 
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 version="1.0" #mandatory
 
  # A display name for the mod
-displayName="Tutorial Mod" #mandatory
+displayName="Aquatic World" #mandatory
 
 # A URL to query for updates for this mod. See the JSON update specification <here>
 updateJSONURL="http://myurl.me" #optional
@@ -29,18 +29,18 @@ displayURL="http://example.com" #optional
 logoFile="hosuseri.png" #optional
 
 # A text field displayed in the mod UI
-credits="First tutorial mod, thanks to TurtyWurty for the tutorial" #optional
+credits="Big thanks to TurtyWurty for the tutorial that helped me build this mod!" #optional
 
 # A text field displayed in the mod UI
 authors="Hosuseri" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-First tutorial mod from Hosuseri
+For those of you who believe that the sea is quite boring, even after 1.13, we bring you more reasons to beging sea exploration!
 '''
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.tutorialmod]] #optional
+[[dependencies.aquaticworld]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -53,7 +53,7 @@ First tutorial mod from Hosuseri
     side="BOTH"
     
 # Here's another dependency
-[[dependencies.tutorialmod]]
+[[dependencies.aquaticworld]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.15.2]"

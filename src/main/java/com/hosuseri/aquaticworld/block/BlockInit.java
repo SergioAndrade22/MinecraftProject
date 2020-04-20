@@ -4,6 +4,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 
 import com.hosuseri.aquaticworld.AquaticWorld;
+import com.hosuseri.aquaticworld.util.LogClass;
 import com.hosuseri.aquaticworld.util.TutorialItemGroup;
 
 import net.minecraft.block.Block;
@@ -24,7 +25,7 @@ public class BlockInit {
 	
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) { // for every block you register you also need to register the item for it
-		AquaticWorld.log("Begin blocks Registy");
+		LogClass.debug("Begin blocks Registy");
 		
 		Block.Properties props = Block.Properties.create(Material.IRON);
 		props.hardnessAndResistance(7f, 15.0f);
@@ -36,12 +37,12 @@ public class BlockInit {
 		
 		event.getRegistry().register(aquamarine_block);
 		
-		AquaticWorld.log("Finish blocks Registry");
+		LogClass.debug("Finish blocks Registry");
 	}
 	
 	@SubscribeEvent
 	public static void registerBlockItems(final RegistryEvent.Register<Item> event) {
-		AquaticWorld.log("Begin blocks Registy");
+		LogClass.debug("Begin item_blocks Registy");
 		
 		Item.Properties props = new Item.Properties();
 		props.maxStackSize(16);
@@ -52,6 +53,6 @@ public class BlockInit {
 		
 		event.getRegistry().register(aquamarine_block_item);
 		
-		AquaticWorld.log("Finish blocks Registry");
+		LogClass.debug("Finish item_blocks Registry");
 	}
 }

@@ -5,6 +5,7 @@ import net.minecraftforge.registries.ObjectHolder;
 
 import com.hosuseri.aquaticworld.AquaticWorld;
 import com.hosuseri.aquaticworld.util.EffectSupplier;
+import com.hosuseri.aquaticworld.util.LogClass;
 import com.hosuseri.aquaticworld.util.TutorialItemGroup;
 
 import net.minecraft.item.AxeItem;
@@ -34,13 +35,13 @@ public class ItemInit {
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
-		AquaticWorld.log("Begin item registry");
+		LogClass.debug("Begin item registry");
 		
 		itemRegistry(event);
 		
 		toolRegistry(event);
 		
-		AquaticWorld.log("Finish item registry");
+		LogClass.debug("Finish item registry");
 	}
 	
 	private static void itemRegistry(final RegistryEvent.Register<Item> event) {

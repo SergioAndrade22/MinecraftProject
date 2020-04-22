@@ -20,6 +20,7 @@ import net.minecraftforge.common.ToolType;
 @ObjectHolder(AquaticWorld.MOD_ID)
 @Mod.EventBusSubscriber(modid = AquaticWorld.MOD_ID, bus= Bus.MOD)
 public class BlockInit {
+	public static Block aquamarine_ore = null;
 	public static Block aquamarine_block = null;
 	public static BlockItem aquamarine_block_item = null;
 	
@@ -27,15 +28,18 @@ public class BlockInit {
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) { // for every block you register you also need to register the item for it
 		LogClass.debug("Begin blocks Registy");
 		
-		Block.Properties props = Block.Properties.create(Material.IRON);
-		props.hardnessAndResistance(7f, 15.0f);
-		props.sound(SoundType.METAL);
-		props.harvestTool(ToolType.PICKAXE);
-		props.harvestLevel(3);
-		aquamarine_block = new Block(props);
+		Block.Properties aquamarine_block_props = Block.Properties.create(Material.IRON);
+		aquamarine_block_props.hardnessAndResistance(7f, 15.0f);
+		aquamarine_block_props.sound(SoundType.METAL);
+		aquamarine_block_props.harvestTool(ToolType.PICKAXE);
+		aquamarine_block_props.harvestLevel(3);
+		aquamarine_block = new Block(aquamarine_block_props);
 		aquamarine_block.setRegistryName("aquamarine_block");
 		
 		event.getRegistry().register(aquamarine_block);
+
+		Block.Properties aquamarine_ore_props = Block.Properties.create(Material.ROCK); 
+		aquamarine_ore_props.hardnessAndResistance(4f, 10f);
 		
 		LogClass.debug("Finish blocks Registry");
 	}

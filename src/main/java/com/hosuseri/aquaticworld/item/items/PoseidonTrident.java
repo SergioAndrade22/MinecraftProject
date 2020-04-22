@@ -2,17 +2,14 @@ package com.hosuseri.aquaticworld.item.items;
 
 import java.util.List;
 
-import com.hosuseri.aquaticworld.block.BlockInit;
 import com.hosuseri.aquaticworld.util.KeyboardHelper;
 import com.hosuseri.aquaticworld.util.LogClass;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.particle.Particle;
-import net.minecraft.client.settings.ParticleStatus;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.LightningBoltEntity;
-import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -21,8 +18,6 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
@@ -32,7 +27,8 @@ public class PoseidonTrident extends Item {
 	private Minecraft mc = Minecraft.getInstance();
 
 	public PoseidonTrident(Properties properties) {
-		super(properties);
+		super(properties.maxDamage(15000));
+		setDamage(getDefaultInstance(), 10);
 	}
 
 	@Override
@@ -44,7 +40,7 @@ public class PoseidonTrident extends Item {
 	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
 		if (KeyboardHelper.isHoldingShift()) {
 			tooltip.add(new StringTextComponent("SHIFT + R_click: triggers rain for 5s and gives 10s regeneration IV \n"
-												+ "R_click on target: cast a lightning_bolt on them"));
+												+ "R_click on target: cast a lightning on them"));
 		}
 		else {
 			tooltip.add(new StringTextComponent("Hold" + "\u00A7e" + " shift " + "\u00A77" + "for more information"));
@@ -61,11 +57,17 @@ public class PoseidonTrident extends Item {
 		}
 		else {
 		    if (!worldIn.isRemote) {
-		    	Vec3d pos = mc.objectMouseOver.getHitVec();
-		    	LogClass.info(pos.toString());
-		    	LightningBoltEntity entitylightning = new LightningBoltEntity(worldIn, pos.x, pos.y, pos.z, true);
-				worldIn.addEntity(entitylightning);
-				worldIn.addOptionalParticle(ParticleTypes.FLASH, pos.x, pos.y, pos.z, 1.0f, 1.0f, 1.0f);
+		    	Entity target;
+		    	if(mc.objectMouseOver != null && (target = mc.pointedEntity) != null) {
+		    	    Vec3d look = playerIn.getLookVec();
+		    	    
+		    	    LogClass.info("Target entity: " + target.toString() + "Player View: " + look.toString());
+
+		    	    LightningBoltEntity bolt = new LightningBoltEntity(worldIn, target.getPosX(), target.getPosY(), target.getPosZ(), false);
+		    	    bolt.addVelocity(look.x, look.y, look.z);
+		    	    worldIn.addEntity(bolt);
+	    	    	worldIn.addParticle(ParticleTypes.FLASH, true,target.getPosX(), target.getPosY(), target.getPosY(), 10.0f, 10.0f, 10.0f);
+		    	}
 		      return super.onItemRightClick(worldIn, playerIn, handIn);
 		    }
 		    return super.onItemRightClick(worldIn, playerIn, handIn);

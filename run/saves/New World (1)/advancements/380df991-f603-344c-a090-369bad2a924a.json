@@ -1,12 +1,46 @@
 {
+  "minecraft:recipes/decorations/item_frame": {
+    "criteria": {
+      "has_leather": "2020-04-22 20:29:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/leather_chestplate": {
+    "criteria": {
+      "has_leather": "2020-04-22 20:29:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/leather_boots": {
+    "criteria": {
+      "has_leather": "2020-04-22 20:29:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/leather_helmet": {
+    "criteria": {
+      "has_leather": "2020-04-22 20:29:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/leather_horse_armor": {
+    "criteria": {
+      "has_leather": "2020-04-22 20:29:54 -0300"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:forest": "2020-04-22 07:36:39 -0300",
-      "minecraft:deep_cold_ocean": "2020-04-22 07:37:11 -0300",
-      "minecraft:beach": "2020-04-22 07:37:01 -0300",
-      "minecraft:plains": "2020-04-22 07:37:15 -0300"
+      "minecraft:taiga": "2020-04-22 19:46:47 -0300",
+      "minecraft:beach": "2020-04-22 19:48:08 -0300"
     },
     "done": false
+  },
+  "minecraft:recipes/combat/leather_leggings": {
+    "criteria": {
+      "has_leather": "2020-04-22 20:29:54 -0300"
+    },
+    "done": true
   },
   "DataVersion": 2230
 }

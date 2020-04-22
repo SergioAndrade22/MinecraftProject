@@ -68,6 +68,8 @@ public class ItemInit {
 		
 		Item.Properties poseidon_trident_props = new Item.Properties();
 		poseidon_trident_props.group(TutorialItemGroup.instance);
+		poseidon_trident_props.defaultMaxDamage(10);
+		poseidon_trident_props.setNoRepair();
 		
 		poseidon_trident = new PoseidonTrident(poseidon_trident_props);
 		poseidon_trident.setRegistryName("poseidon_trident");

@@ -4,7 +4,6 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
 
 import com.hosuseri.aquaticworld.AquaticWorld;
-import com.hosuseri.aquaticworld.util.EffectSupplier;
 import com.hosuseri.aquaticworld.util.LogClass;
 import com.hosuseri.aquaticworld.util.TutorialItemGroup;
 import com.hosuseri.aquaticworld.item.items.*;
@@ -109,9 +108,9 @@ public class ItemInit {
 		builder = builder.fastToEat();
 		builder = builder.saturation(3.0f);
 		builder = builder.setAlwaysEdible();
-		builder = builder.effect(new EffectSupplier<EffectInstance>(Effects.WATER_BREATHING, 4800, 5), 1.0f);
-		builder = builder.effect(new EffectSupplier<EffectInstance>(Effects.NIGHT_VISION, 4800, 5), 1.0f);
-		builder = builder.effect(new EffectSupplier<EffectInstance>(Effects.DOLPHINS_GRACE, 4800, 5), 1.0f);
+		builder = builder.effect(() -> new EffectInstance(Effects.WATER_BREATHING, 4800, 5), 1.0f);
+		builder = builder.effect(() -> new EffectInstance(Effects.NIGHT_VISION, 4800, 5), 1.0f);
+		builder = builder.effect(() -> new EffectInstance(Effects.DOLPHINS_GRACE, 4800, 5), 1.0f);
 		return builder;
 	}
 }

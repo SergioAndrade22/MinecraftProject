@@ -5,7 +5,7 @@ import net.minecraftforge.registries.ObjectHolder;
 
 import com.hosuseri.aquaticworld.AquaticWorld;
 import com.hosuseri.aquaticworld.util.LogClass;
-import com.hosuseri.aquaticworld.util.TutorialItemGroup;
+import com.hosuseri.aquaticworld.util.AquaticWorldItemGroup;
 import com.hosuseri.aquaticworld.item.items.*;
 
 import net.minecraft.item.AxeItem;
@@ -47,7 +47,7 @@ public class ItemInit {
 	
 	private static void itemRegistry(final RegistryEvent.Register<Item> event) {
 		Item.Properties aquamarine_props = new Item.Properties();
-		aquamarine_props.group(TutorialItemGroup.instance);
+		aquamarine_props.group(AquaticWorldItemGroup.instance);
 		aquamarine_props.maxStackSize(16);
 		
 		aquamarine = new Item(aquamarine_props);
@@ -55,7 +55,7 @@ public class ItemInit {
 		event.getRegistry().register(aquamarine);
 		
 		Item.Properties fructus_mare_properties = new Item.Properties();
-		fructus_mare_properties.group(TutorialItemGroup.instance);		
+		fructus_mare_properties.group(AquaticWorldItemGroup.instance);		
 		
 		Food.Builder builder = createBuilder();		
 		
@@ -67,7 +67,7 @@ public class ItemInit {
 		event.getRegistry().register(fructus_mare);
 		
 		Item.Properties poseidon_trident_props = new Item.Properties();
-		poseidon_trident_props.group(TutorialItemGroup.instance);
+		poseidon_trident_props.group(AquaticWorldItemGroup.instance);
 		poseidon_trident_props.defaultMaxDamage(10);
 		poseidon_trident_props.setNoRepair();
 		
@@ -79,7 +79,7 @@ public class ItemInit {
 	
 	private static void toolRegistry(final RegistryEvent.Register<Item> event) {	
 		Item.Properties tool_props = new Item.Properties();
-		tool_props.group(TutorialItemGroup.instance);
+		tool_props.group(AquaticWorldItemGroup.instance);
 		tool_props.maxStackSize(1);
 		
 		aquamarine_sword = new SwordItem(ModItemTier.AQUAMARINE, 8, -1.5f, tool_props);

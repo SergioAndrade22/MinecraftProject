@@ -41,7 +41,7 @@ public class PoseidonTrident extends Item {
 		}
 		else {
 			tooltip.add(new StringTextComponent("Current lightning cooldown: " + Math.round(lightning_cooldown.getCooldown(this, 0) * 100) + "s \n"
-												+ "Current regeneration cooldown: " + regeneration_cooldown.getCooldown(this, 0) + "s \n"
+												+ "Current regeneration cooldown: " + regeneration_cooldown.getCooldown(this, 0) / 10 + "s \n"
 												+ "Hold" + "\u00A7e" + " shift " + "\u00A77" + "for more information"));
 		}
 		super.addInformation(stack, worldIn, tooltip, flagIn);

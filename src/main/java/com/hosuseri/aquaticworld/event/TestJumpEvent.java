@@ -18,14 +18,14 @@ import com.hosuseri.aquaticworld.util.LogClass;
 public class TestJumpEvent {
 	@SubscribeEvent
 	public static void testJumpEvent(LivingJumpEvent event){
-		if (event.getEntity() instanceof PlayerEntity) {
-			LogClass.info("testJumpEvent fired.");
-			LivingEntity entity = event.getEntityLiving();
-	//		World world = entity.getEntityWorld();
-	//		world.setBlockState(entity.getPosition().add(0, 5, 0), BlockInit.aquamarine_block.getDefaultState());
-			entity.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 600, 2));
-			entity.addPotionEffect(new EffectInstance(Effects.RESISTANCE, 5000, 255));
-			entity.setGlowing(true);
-		}
+//		if (event.getEntity() instanceof PlayerEntity) {
+//			LogClass.info("testJumpEvent fired.");
+//			LivingEntity entity = event.getEntityLiving();
+//			World world = entity.getEntityWorld();
+//			world.setBlockState(entity.getPosition().add(0, 5, 0), BlockInit.aquamarine_block.getDefaultState());
+//			entity.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 600, 2));
+//			entity.addPotionEffect(new EffectInstance(Effects.RESISTANCE, 5000, 255));
+//			entity.setGlowing(true);
+//		}
 	}
 }

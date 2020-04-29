@@ -12,5 +12,7 @@
 	"item.aquaticworld.aquamarine_pickaxe": "Aquamarine Pickaxe",
 	
 	"block.aquaticworld.aquamarine_block": "Aquamarine Block",
-	"block.aquaticworld.aquamarine_ore": "Aquamarine Ore"
+	"block.aquaticworld.aquamarine_ore": "Aquamarine Ore",
+	"block.aquaticworld.beryl_ore": "Beryl Ore",
+	"block.aquaticworld.opal_ore": "Opal Ore"
 }

@@ -7,7 +7,7 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
 
 public enum ModItemTier implements IItemTier{
-	AQUAMARINE(3, 3124, 14.0f, 1.0f, 24, () -> {
+	AQUAMARINE(4, 3124, 14.0f, 1.0f, 24, () -> {
 		return Ingredient.fromItems(ItemInit.aquamarine);
 	});
 

@@ -12,8 +12,6 @@ import net.minecraft.item.AxeItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
@@ -86,11 +84,11 @@ public class ItemInit {
 		aquamarine_sword.setRegistryName("aquamarine_sword");
 		event.getRegistry().register(aquamarine_sword);
 		
-		aquamarine_shovel = new ShovelItem(ModItemTier.AQUAMARINE, 0, -3.2f, tool_props);
+		aquamarine_shovel = new AquamarineShovel(ModItemTier.AQUAMARINE, 0, -3.2f, tool_props);
 		aquamarine_shovel.setRegistryName("aquamarine_shovel");
 		event.getRegistry().register(aquamarine_shovel);
 		
-		aquamarine_pickaxe = new PickaxeItem(ModItemTier.AQUAMARINE, 0, -3.2f, tool_props);
+		aquamarine_pickaxe = new AquamarinePickaxe(ModItemTier.AQUAMARINE, 0, -3.2f, tool_props);
 		aquamarine_pickaxe.setRegistryName("aquamarine_pickaxe");
 		event.getRegistry().register(aquamarine_pickaxe);
 		

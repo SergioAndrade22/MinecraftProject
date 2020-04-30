@@ -1,6 +1,5 @@
 package com.hosuseri.aquaticworld.item.tools;
 
-import com.hosuseri.aquaticworld.item.ModItemTier;
 import com.hosuseri.aquaticworld.util.AquaticWorldItemGroup;
 
 import net.minecraft.item.IItemTier;

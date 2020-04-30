@@ -1,6 +1,8 @@
-package com.hosuseri.aquaticworld.item;
+package com.hosuseri.aquaticworld.item.tools;
 
 import java.util.function.Supplier;
+
+import com.hosuseri.aquaticworld.item.ItemList;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;

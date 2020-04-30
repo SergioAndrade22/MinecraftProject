@@ -21,6 +21,7 @@ public class ItemInit {
 		
 		itemRegistry(event);
 		toolRegistry(event);
+		armorRegistry(event);
 		
 		LogClass.debug("Finish item registry");
 	}
@@ -56,5 +57,27 @@ public class ItemInit {
 		event.getRegistry().register(ToolList.aquamarine_hoe);
 		
 		event.getRegistry().register(ToolList.aquamarine_axe);
+	}
+	
+	private static void armorRegistry(final RegistryEvent.Register<Item> event) {
+		// Boots
+		event.getRegistry().register(ArmorList.aquamarine_boots);
+		event.getRegistry().register(ArmorList.beryl_boots);
+		event.getRegistry().register(ArmorList.opal_boots);
+		
+		// Leggings
+		event.getRegistry().register(ArmorList.aquamarine_leggings);
+		event.getRegistry().register(ArmorList.beryl_leggings);
+		event.getRegistry().register(ArmorList.opal_leggings);
+		
+		// Chestplates
+		event.getRegistry().register(ArmorList.aquamarine_chestplate);
+		event.getRegistry().register(ArmorList.beryl_chestplate);
+		event.getRegistry().register(ArmorList.opal_chestplate);
+		
+		// Helmets
+		event.getRegistry().register(ArmorList.aquamarine_helmet);
+		event.getRegistry().register(ArmorList.beryl_helmet);
+		event.getRegistry().register(ArmorList.opal_helmet);
 	}
 }

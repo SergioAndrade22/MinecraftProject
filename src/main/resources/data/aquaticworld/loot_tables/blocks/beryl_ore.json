@@ -24,7 +24,7 @@
 					        }
 					      }
 					    ],
-					    "name": "aquaticworld:aquamarine_ore"
+					    "name": "aquaticworld:beryl_ore"
 					  },
 					  {
 					    "type": "minecraft:item",
@@ -33,7 +33,7 @@
 					        "function": "minecraft:set_count",
 					        "count": {
 					          "min": 1.0,
-					          "max": 4.0,
+					          "max": 3.0,
 					          "type": "minecraft:uniform"
 					        }
 					      },
@@ -46,7 +46,7 @@
 					        "function": "minecraft:explosion_decay"
 					      }
 					    ],
-					    "name": "aquaticworld:aquamarine"
+					    "name": "aquaticworld:beryl"
 					  }
 					]
 				}

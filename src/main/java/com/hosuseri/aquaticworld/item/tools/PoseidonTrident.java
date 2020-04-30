@@ -1,4 +1,4 @@
-package com.hosuseri.aquaticworld.item.items;
+package com.hosuseri.aquaticworld.item.tools;
 
 import java.util.List;
 

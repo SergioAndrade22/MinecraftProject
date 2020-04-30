@@ -4,6 +4,9 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
 
 import com.hosuseri.aquaticworld.AquaticWorld;
+import com.hosuseri.aquaticworld.item.armors.ArmorList;
+import com.hosuseri.aquaticworld.item.items.ItemList;
+import com.hosuseri.aquaticworld.item.tools.ToolList;
 import com.hosuseri.aquaticworld.util.LogClass;
 
 import net.minecraft.item.Item;
@@ -42,21 +45,36 @@ public class ItemInit {
 		event.getRegistry().register(ItemList.clam);
 		
 		event.getRegistry().register(ItemList.fructus_mare);
-		
-		event.getRegistry().register(ItemList.poseidon_trident);
 	}
 	
 	private static void toolRegistry(final RegistryEvent.Register<Item> event) {
+		event.getRegistry().register(ToolList.poseidon_trident);
 		
+		// Swords
 		event.getRegistry().register(ToolList.aquamarine_sword);
+		event.getRegistry().register(ToolList.beryl_sword);
+		event.getRegistry().register(ToolList.opal_sword);
 		
-		event.getRegistry().register(ToolList.aquamarine_shovel);
-		
+		// Pickaxes
 		event.getRegistry().register(ToolList.aquamarine_pickaxe);
+		event.getRegistry().register(ToolList.beryl_pickaxe);
+		event.getRegistry().register(ToolList.opal_pickaxe);
 		
-		event.getRegistry().register(ToolList.aquamarine_hoe);
-		
+		// Axes
 		event.getRegistry().register(ToolList.aquamarine_axe);
+		event.getRegistry().register(ToolList.beryl_axe);
+		event.getRegistry().register(ToolList.opal_axe);
+		
+		// Shovels
+		event.getRegistry().register(ToolList.aquamarine_shovel);
+		event.getRegistry().register(ToolList.beryl_shovel);
+		event.getRegistry().register(ToolList.opal_shovel);
+		
+		// Hoes
+		event.getRegistry().register(ToolList.aquamarine_hoe);
+		event.getRegistry().register(ToolList.beryl_hoe);
+		event.getRegistry().register(ToolList.opal_hoe);
+		
 	}
 	
 	private static void armorRegistry(final RegistryEvent.Register<Item> event) {

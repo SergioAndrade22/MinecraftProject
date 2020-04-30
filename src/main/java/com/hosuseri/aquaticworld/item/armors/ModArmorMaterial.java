@@ -1,7 +1,7 @@
 package com.hosuseri.aquaticworld.item.armors;
 
 import com.hosuseri.aquaticworld.AquaticWorld;
-import com.hosuseri.aquaticworld.item.ItemList;
+import com.hosuseri.aquaticworld.item.items.ItemList;
 
 import java.util.function.Supplier;
 
@@ -23,7 +23,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
 	BERYL(AquaticWorld.MOD_ID + ":beryl", 45, new int[]{8, 11, 13, 9}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 8f, () ->{
 		return Ingredient.fromItems(ItemList.beryl);
 	}),
-	OPAL(AquaticWorld.MOD_ID + ":opal", 52, new int[]{11, 14, 16, 12}, 420, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 11f, () ->{
+	OPAL(AquaticWorld.MOD_ID + ":opal", 52, new int[]{11, 14, 16, 12}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 11f, () ->{
 		return Ingredient.fromItems(ItemList.opal);
 	});
 	

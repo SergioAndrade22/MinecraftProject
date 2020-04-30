@@ -32,11 +32,11 @@ logoFile="hosuseri.png" #optional
 credits="Big thanks to TurtyWurty for the tutorial that helped me build this mod!" #optional
 
 # A text field displayed in the mod UI
-authors="Hosuseri" #optional
+authors="Hosuseri and Yumikoi" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-For those of you who believe that the sea is quite boring, even after 1.13, we bring you more reasons to beging sea exploration!
+For those of you who believe that the sea is quite boring, even after 1.13, we bring you more reasons to begging your sea exploration!
 '''
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.

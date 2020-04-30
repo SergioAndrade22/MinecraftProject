@@ -18,8 +18,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class AquaticWorld{
     
     public static final String MOD_ID = "aquaticworld";
-    
-//    public static AquaticWorld instance;
 
     public AquaticWorld() {
     	final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -27,8 +25,6 @@ public class AquaticWorld{
         modEventBus.addListener(this::doClientStuff);
 
         MinecraftForge.EVENT_BUS.register(this);
-        
-      //  instance = this;
     }
 
     private void setup(final FMLCommonSetupEvent event){

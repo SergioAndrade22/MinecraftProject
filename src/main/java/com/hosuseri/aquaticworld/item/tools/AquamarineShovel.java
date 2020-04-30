@@ -1,18 +1,28 @@
-package com.hosuseri.aquaticworld.item.items;
+package com.hosuseri.aquaticworld.item.tools;
+
+import com.hosuseri.aquaticworld.item.ModItemTier;
+import com.hosuseri.aquaticworld.util.AquaticWorldItemGroup;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.IItemTier;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.ShovelItem;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
 
-public class AquamarinePickaxe extends PickaxeItem {
+public class AquamarineShovel extends ShovelItem {
 
-	public AquamarinePickaxe(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties builder) {
-		super(tier, attackDamageIn, attackSpeedIn, builder);
+	private static IItemTier tier = ModItemTier.AQUAMARINE;
+	private static int attackDamage = 0;
+	private static float attackSpeed = -3.2f;
+	private static Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance).maxStackSize(1);
+	
+	public AquamarineShovel() {
+		super(tier, attackDamage, attackSpeed, props);
+		setRegistryName("aquamarine_shovel");
 	}
 
 	@Override
@@ -23,5 +33,4 @@ public class AquamarinePickaxe extends PickaxeItem {
 		}
 		super.inventoryTick(stack, worldIn, entityIn, itemSlot, isSelected);
 	}
-	
 }

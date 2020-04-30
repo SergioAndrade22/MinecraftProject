@@ -2,6 +2,7 @@ package com.hosuseri.aquaticworld.item.items;
 
 import java.util.List;
 
+import com.hosuseri.aquaticworld.util.AquaticWorldItemGroup;
 import com.hosuseri.aquaticworld.util.KeyboardHelper;
 
 import net.minecraft.client.util.ITooltipFlag;
@@ -10,6 +11,7 @@ import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.TridentItem;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.ActionResult;
@@ -20,12 +22,16 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 
-public class PoseidonTrident extends Item {
+public class PoseidonTrident extends TridentItem {
+	
+	private static Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance).maxDamage(15).setNoRepair();
+	
 	private CooldownTracker lightning_cooldown = new CooldownTracker();
 	private CooldownTracker regeneration_cooldown = new CooldownTracker();
 	
-	public PoseidonTrident(Properties properties) {
-		super(properties);
+	public PoseidonTrident() {
+		super(props);
+		setRegistryName("poseidon_trident");
 	}
 
 	@Override

@@ -1,6 +1,6 @@
 package com.hosuseri.aquaticworld.util;
 
-import com.hosuseri.aquaticworld.item.ItemInit;
+import com.hosuseri.aquaticworld.item.ItemList;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -13,6 +13,6 @@ public class AquaticWorldItemGroup extends ItemGroup{
 	}
 	
 	public ItemStack createIcon() {
-		return new ItemStack(ItemInit.poseidon_trident);
+		return new ItemStack(ItemList.poseidon_trident);
 	}
 }

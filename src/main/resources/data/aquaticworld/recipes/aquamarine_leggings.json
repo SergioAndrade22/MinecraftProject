@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"aaa",
+		"a a",
+		"a a"
+	],
+	"key":{
+		"a":{ "item": "aquaticworld:aquamarine" }
+	},
+	"result":{ "item": "aquaticworld:aquamarine_leggings" }
+}

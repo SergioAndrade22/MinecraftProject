@@ -9,8 +9,11 @@
 	"item.aquaticworld.pearl": "Pearl",
 	"item.aquaticworld.clam": "Clam",
 	"item.aquaticworld.sea_tear": "Sea Tear",
-	"item.aquaticworld.fructus_mare": "Fructus mare",
-	"item.aquaticworld.poseidon_trident": "Poseidon's Trident",
+	"item.aquaticworld.fructus_mare": "Fructus Mare",
+	
+	"item.aquaticworld.prismarine_stick": "Prismarine Stick",
+	"item.aquaticworld.aquamarine_stick": "Aquamarine Stick",
+	"item.aquaticworld.beryl_stick": "Beryl Stick",
 	
 	"item.aquaticworld.aquamarine_helmet": "Aquamarine Helmet",
 	"item.aquaticworld.beryl_helmet": "Beryl Helmet",
@@ -48,7 +51,15 @@
 	"item.aquaticworld.beryl_pickaxe": "Beryl Pickaxe",
 	"item.aquaticworld.opal_pickaxe": "Opal Pickaxe",
 	
+	"item.aquaticworld.poseidon_trident": "Poseidon's Trident",
+	
+	"block.aquaticworld.water_stone": "Water Stone",
+	"block.aquaticworld.water_cobblestone": "Water Cobblestone",
+	
 	"block.aquaticworld.aquamarine_block": "Aquamarine Block",
+	"block.aquaticworld.beryl_block": "Beryl Block",
+	"block.aquaticworld.opal_block": "Opal Block",
+	
 	"block.aquaticworld.aquamarine_ore": "Aquamarine Ore",
 	"block.aquaticworld.beryl_ore": "Beryl Ore",
 	"block.aquaticworld.opal_ore": "Opal Ore"

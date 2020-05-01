@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"aa",
+		" s",
+		" s"
+	],
+	"key":{
+		"a":{ "item": "aquaticworld:opal" },
+		"s":{ "item": "aquaticworld:beryl_stick" }
+	},
+	"result":{ "item": "aquaticworld:opal_hoe" }
+}

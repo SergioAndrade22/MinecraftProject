@@ -13,17 +13,18 @@ public class AquamarineBlock extends Block {
 
 	private static Properties props = Block.Properties.create(Material.IRON).hardnessAndResistance(7f, 15.0f).sound(SoundType.METAL).harvestTool(ToolType.PICKAXE).harvestLevel(3);
 	private BlockItem item; 
+	private final String name = "aquamarine_block";
 	
 	public AquamarineBlock() {
 		super(props);
-		setRegistryName("aquamarine_block");
+		setRegistryName(name);
 		
 		Item.Properties item_props = new Item.Properties();
 		item_props.maxStackSize(64);
 		item_props.group(AquaticWorldItemGroup.instance);
 		
 		item = new BlockItem(this, item_props);
-		item.setRegistryName("aquamarine_block");
+		item.setRegistryName(name);
 	}
 	
 	@Override

@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"bbb",
+		"b b",
+		"b b"
+	],
+	"key":{
+		"b":{ "item": "aquaticworld:beryl" }
+	},
+	"result":{ "item": "aquaticworld:beryl_leggings" }
+}

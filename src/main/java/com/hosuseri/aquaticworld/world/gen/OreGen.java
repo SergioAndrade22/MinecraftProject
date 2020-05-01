@@ -1,6 +1,6 @@
 package com.hosuseri.aquaticworld.world.gen;
 
-import com.hosuseri.aquaticworld.block.OreList;
+import com.hosuseri.aquaticworld.block.ores.OreList;
 
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;

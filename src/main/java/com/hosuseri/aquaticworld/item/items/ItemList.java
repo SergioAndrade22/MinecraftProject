@@ -20,4 +20,9 @@ public class ItemList {
 	
 	public static Item fructus_mare = new FructusMare();
 	
+	public static Item prismarine_stick = new PrismarineStick();
+	
+	public static Item aquamarine_stick = new AquamarineStick();
+	
+	public static Item beryl_stick = new BerylStick();
 }

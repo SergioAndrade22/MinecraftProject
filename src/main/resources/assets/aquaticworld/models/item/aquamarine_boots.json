@@ -1,6 +1,6 @@
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "aquaticworld:item/aquamarine_helmet"
+		"layer0": "aquaticworld:item/aquamarine_boots"
 	}
 }

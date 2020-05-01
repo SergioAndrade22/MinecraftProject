@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"aa",
+		" s",
+		" s"
+	],
+	"key":{
+		"a":{ "item": "aquaticworld:aquamarine" },
+		"s":{ "item": "aquaticworld:prismarine_stick" }
+	},
+	"result":{ "item": "aquaticworld:aquamarine_hoe" }
+}

@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"b b",
+		"bbb",
+		"bbb"
+	],
+	"key":{
+		"b":{ "item": "aquaticworld:beryl" }
+	},
+	"result":{ "item": "aquaticworld:beryl_chestplate" }
+}

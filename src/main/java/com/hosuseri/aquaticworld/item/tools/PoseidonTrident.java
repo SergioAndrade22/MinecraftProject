@@ -21,6 +21,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 
 public class PoseidonTrident extends TridentItem {
 	
@@ -70,11 +71,11 @@ public class PoseidonTrident extends TridentItem {
 		}
 		else {
 		    if (!worldIn.isRemote && !lightning_cooldown.hasCooldown(this)) {
+		    	ServerWorld server = (ServerWorld) worldIn;
 	    	    Vec3d player_look = playerIn.getLookVec();
 
 	    	    LightningBoltEntity bolt = new LightningBoltEntity(worldIn, playerIn.getPosX() + player_look.x, playerIn.getPosY() + player_look.y, playerIn.getPosZ() + player_look.z, false);
-	    	    bolt.addVelocity(player_look.x, player_look.y, player_look.z);
-	    	    worldIn.addEntity(bolt);
+	    	    server.addLightningBolt(bolt);
 	    	    
 	    	    lightning_cooldown.setCooldown(this, 400);
 		    }

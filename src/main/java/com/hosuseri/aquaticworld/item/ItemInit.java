@@ -45,6 +45,12 @@ public class ItemInit {
 		event.getRegistry().register(ItemList.clam);
 		
 		event.getRegistry().register(ItemList.fructus_mare);
+		
+		event.getRegistry().register(ItemList.prismarine_stick);
+		
+		event.getRegistry().register(ItemList.aquamarine_stick);
+		
+		event.getRegistry().register(ItemList.beryl_stick);
 	}
 	
 	private static void toolRegistry(final RegistryEvent.Register<Item> event) {
@@ -74,7 +80,6 @@ public class ItemInit {
 		event.getRegistry().register(ToolList.aquamarine_hoe);
 		event.getRegistry().register(ToolList.beryl_hoe);
 		event.getRegistry().register(ToolList.opal_hoe);
-		
 	}
 	
 	private static void armorRegistry(final RegistryEvent.Register<Item> event) {

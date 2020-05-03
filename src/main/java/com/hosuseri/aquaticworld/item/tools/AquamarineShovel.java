@@ -14,6 +14,7 @@ import net.minecraft.world.World;
 
 public class AquamarineShovel extends ShovelItem {
 
+	public static final String name = "aquamarine_shovel";
 	private static IItemTier tier = ModItemTier.AQUAMARINE;
 	private static int attackDamage = 0;
 	private static float attackSpeed = -3.2f;
@@ -21,7 +22,6 @@ public class AquamarineShovel extends ShovelItem {
 	
 	public AquamarineShovel() {
 		super(tier, attackDamage, attackSpeed, props);
-		setRegistryName("aquamarine_shovel");
 	}
 
 	@Override

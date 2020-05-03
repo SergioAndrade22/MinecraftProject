@@ -2,7 +2,7 @@ package com.hosuseri.aquaticworld.item.tools;
 
 import java.util.function.Supplier;
 
-import com.hosuseri.aquaticworld.item.items.ItemList;
+import com.hosuseri.aquaticworld.item.ItemInit;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
@@ -10,13 +10,13 @@ import net.minecraft.util.LazyValue;
 
 public enum ModItemTier implements IItemTier{
 	AQUAMARINE(4, 3124, 14.0f, 1.0f, 15, () -> {
-		return Ingredient.fromItems(ItemList.aquamarine);
+		return Ingredient.fromItems(ItemInit.AQUAMARINE.get());
 	}),
 	BERYL(5, 4686, 19.0f, 1.0f, 20, () -> {
-		return Ingredient.fromItems(ItemList.beryl);
+		return Ingredient.fromItems(ItemInit.BERYL.get());
 	}),
 	OPAL(6, 7029, 24.0f, 1.0f, 25, () -> {
-		return Ingredient.fromItems(ItemList.opal);
+		return Ingredient.fromItems(ItemInit.OPAL.get());
 	});
 
 	private final int harvest_level;

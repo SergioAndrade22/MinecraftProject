@@ -13,11 +13,10 @@ public class WaterStone extends Block {
 
 	private static Properties props = Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5f, 6f).harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE);
 	private BlockItem item;
-	private final String name = "water_stone";
+	public static final String name = "water_stone";
 	
 	public WaterStone() {
 		super(props);
-		setRegistryName(name);
 		
 		Item.Properties item_props = new Item.Properties();
 		item_props.maxStackSize(64);

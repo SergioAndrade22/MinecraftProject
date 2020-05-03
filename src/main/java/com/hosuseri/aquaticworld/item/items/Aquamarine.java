@@ -8,8 +8,9 @@ public class Aquamarine extends Item{
 
 	private static Item.Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance);
 	
+	public static final String name = "aquamarine";
+	
 	public Aquamarine() {
 		super(props);
-		setRegistryName("aquamarine");
 	}
 }

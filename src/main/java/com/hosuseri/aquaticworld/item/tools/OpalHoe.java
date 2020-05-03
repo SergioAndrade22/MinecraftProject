@@ -8,13 +8,12 @@ import net.minecraft.item.Item;
 
 public class OpalHoe extends HoeItem {
 
+	public static final String name = "opal_hoe";
 	private static IItemTier tier = ModItemTier.OPAL;
 	private static float attackSpeed = -3.2f;
 	private static Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance).maxStackSize(1);
-	
 
 	public OpalHoe() {
 		super(tier, attackSpeed, props);
-		setRegistryName("opal_hoe");
 	}
 }

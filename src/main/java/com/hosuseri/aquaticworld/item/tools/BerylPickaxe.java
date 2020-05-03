@@ -13,16 +13,15 @@ import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
 
 public class BerylPickaxe extends PickaxeItem {
-	
+
+	public static final String name = "beryl_pickaxe";
 	private static IItemTier tier = ModItemTier.BERYL;
 	private static int attackDamage = 0;
 	private static float attackSpeed = -3.2f;
 	private static Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance).maxStackSize(1);
 	
-
 	public BerylPickaxe() {
 		super(tier, attackDamage, attackSpeed, props);
-		setRegistryName("beryl_pickaxe");
 	}
 
 	@Override

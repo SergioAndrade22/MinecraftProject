@@ -10,10 +10,9 @@ public class OpalLeggings extends ArmorItem {
 	private static ModArmorMaterial material = ModArmorMaterial.OPAL;
 	private static EquipmentSlotType slot = EquipmentSlotType.LEGS;
 	private static Properties props = new Properties().group(AquaticWorldItemGroup.instance);
-	private static final String name = "opal_leggings";
+	public static final String name = "opal_leggings";
 	
 	public OpalLeggings() {
 		super(material, slot, props);
-		setRegistryName(name);
 	}
 }

@@ -1,6 +1,6 @@
 package com.hosuseri.aquaticworld.world.gen;
 
-import com.hosuseri.aquaticworld.block.ores.OreList;
+import com.hosuseri.aquaticworld.block.BlockInit;
 
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
@@ -14,9 +14,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class OreGen {
 	
 	// OreFeatureConfig(on which type of block it generates, the block to generate, the number of ores in the vein)
-	private static OreFeatureConfig aquamarine_config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, OreList.aquamarine_ore.getDefaultState(), 5);
-	private static OreFeatureConfig beryl_config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, OreList.beryl_ore.getDefaultState(), 4);
-	private static OreFeatureConfig opal_config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, OreList.opal_ore.getDefaultState(), 3);
+	private static OreFeatureConfig aquamarine_config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.AQUAMARINE_ORE.get().getDefaultState(), 5);
+	private static OreFeatureConfig beryl_config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.BERYL_ORE.get().getDefaultState(), 4);
+	private static OreFeatureConfig opal_config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.OPAL_ORE.get().getDefaultState(), 3);
 
 	// CountRangeConfig(how common it is 20 is more common than coal, from 0 how many blocks above, from world height how many blocks below, maximum height can generate - top offset)
 	private static ConfiguredPlacement<?> aquamarine_placement = Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 5, 10, 62));

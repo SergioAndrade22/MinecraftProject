@@ -8,14 +8,13 @@ import net.minecraft.item.SwordItem;
 
 public class OpalSword extends SwordItem {
 	
+	public static final String name = "opal_sword";
 	private static IItemTier tier = ModItemTier.OPAL;
 	private static int attackDamage = 14;
 	private static float attackSpeed = -0.9f;
 	private static Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance).maxStackSize(1);
 	
-
 	public OpalSword() {
 		super(tier, attackDamage, attackSpeed, props);
-		setRegistryName("opal_sword");
 	}
 }

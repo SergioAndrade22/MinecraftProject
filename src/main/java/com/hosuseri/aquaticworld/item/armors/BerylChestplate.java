@@ -10,10 +10,9 @@ public class BerylChestplate extends ArmorItem {
 	private static ModArmorMaterial material = ModArmorMaterial.BERYL;
 	private static EquipmentSlotType slot = EquipmentSlotType.CHEST;
 	private static Properties props = new Properties().group(AquaticWorldItemGroup.instance);
-	private static final String name = "beryl_chestplate";
+	public static final String name = "beryl_chestplate";
 	
 	public BerylChestplate() {
 		super(material, slot, props);
-		setRegistryName(name);
 	}
 }

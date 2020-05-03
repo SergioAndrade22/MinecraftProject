@@ -13,11 +13,10 @@ public class BerylBlock extends Block {
 
 	private static Properties props = Block.Properties.create(Material.IRON).hardnessAndResistance(10f, 18.0f).sound(SoundType.METAL).harvestTool(ToolType.PICKAXE).harvestLevel(3);
 	private BlockItem item; 
-	private final String name = "beryl_block";
+	public static final String name = "beryl_block";
 	
 	public BerylBlock() {
 		super(props);
-		setRegistryName(name);
 		
 		Item.Properties item_props = new Item.Properties();
 		item_props.maxStackSize(64);

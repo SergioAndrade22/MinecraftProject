@@ -13,16 +13,15 @@ import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
 
 public class AquamarinePickaxe extends PickaxeItem {
-	
+
+	public static final String name = "aquamarine_pickaxe";
 	private static IItemTier tier = ModItemTier.AQUAMARINE;
 	private static int attackDamage = 0;
 	private static float attackSpeed = -3.2f;
 	private static Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance).maxStackSize(1);
 	
-
 	public AquamarinePickaxe() {
 		super(tier, attackDamage, attackSpeed, props);
-		setRegistryName("aquamarine_pickaxe");
 	}
 
 	@Override

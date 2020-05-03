@@ -14,6 +14,7 @@ import net.minecraft.world.World;
 
 public class BerylShovel extends ShovelItem {
 
+	public static final String name = "beryl_shovel";
 	private static IItemTier tier = ModItemTier.BERYL;
 	private static int attackDamage = 0;
 	private static float attackSpeed = -3.2f;
@@ -21,7 +22,6 @@ public class BerylShovel extends ShovelItem {
 	
 	public BerylShovel() {
 		super(tier, attackDamage, attackSpeed, props);
-		setRegistryName("beryl_shovel");
 	}
 
 	@Override

@@ -8,15 +8,14 @@ import net.minecraft.item.Item;
 
 public class AquamarineAxe extends AxeItem {
 
+	public static final String name = "aquamarine_axe";
 	private static IItemTier tier = ModItemTier.AQUAMARINE;
 	private static int attackDamage = 11;
 	private static float attackSpeed = -2.4f;
 	private static Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance).maxStackSize(1);
 	
-
 	public AquamarineAxe() {
 		super(tier, attackDamage, attackSpeed, props);
-		setRegistryName("aquamarine_axe");
 	}
 	
 }

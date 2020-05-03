@@ -25,14 +25,13 @@ import net.minecraft.world.server.ServerWorld;
 
 public class PoseidonTrident extends TridentItem {
 	
+	public static final String name = "poseidon_trident";
 	private static Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance).maxDamage(15).setNoRepair();
-	
 	private CooldownTracker lightning_cooldown = new CooldownTracker();
 	private CooldownTracker regeneration_cooldown = new CooldownTracker();
 	
 	public PoseidonTrident() {
 		super(props);
-		setRegistryName("poseidon_trident");
 	}
 
 	@Override

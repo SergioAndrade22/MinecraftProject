@@ -19,12 +19,10 @@ public class OpalOre extends Block {
 
 	private static Block.Properties props = Block.Properties.create(Material.ROCK).hardnessAndResistance(10f, 20f).sound(SoundType.STONE).harvestLevel(5).harvestTool(ToolType.PICKAXE);
 	private BlockItem item;
-	private final String name = "opal_ore";
+	public static final String name = "opal_ore";
 	
 	public OpalOre() {
 		super(props);
-		
-		setRegistryName(name);
 		
 		Item.Properties item_props = new Item.Properties();
 		item_props.maxStackSize(64);

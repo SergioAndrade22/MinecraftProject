@@ -7,15 +7,14 @@ import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
 
 public class AquamarineSword extends SwordItem {
-	
+
+	public static final String name = "aquamarine_sword";
 	private static IItemTier tier = ModItemTier.AQUAMARINE;
 	private static int attackDamage = 8;
 	private static float attackSpeed = -1.5f;
 	private static Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance).maxStackSize(1);
 	
-
 	public AquamarineSword() {
 		super(tier, attackDamage, attackSpeed, props);
-		setRegistryName("aquamarine_sword");
 	}
 }

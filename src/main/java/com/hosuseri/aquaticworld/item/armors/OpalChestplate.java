@@ -10,10 +10,9 @@ public class OpalChestplate extends ArmorItem {
 	private static ModArmorMaterial material = ModArmorMaterial.OPAL;
 	private static EquipmentSlotType slot = EquipmentSlotType.CHEST;
 	private static Properties props = new Properties().group(AquaticWorldItemGroup.instance);
-	private static final String name = "opal_chestplate";
+	public static final String name = "opal_chestplate";
 	
 	public OpalChestplate() {
 		super(material, slot, props);
-		setRegistryName(name);
 	}
 }

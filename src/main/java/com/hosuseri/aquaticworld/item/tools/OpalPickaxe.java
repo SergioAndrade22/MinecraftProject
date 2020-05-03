@@ -13,16 +13,15 @@ import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
 
 public class OpalPickaxe extends PickaxeItem {
-	
+
+	public static final String name = "opal_pickaxe";
 	private static IItemTier tier = ModItemTier.OPAL;
 	private static int attackDamage = 0;
 	private static float attackSpeed = -3.2f;
 	private static Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance).maxStackSize(1);
 	
-
 	public OpalPickaxe() {
 		super(tier, attackDamage, attackSpeed, props);
-		setRegistryName("opal_pickaxe");
 	}
 
 	@Override

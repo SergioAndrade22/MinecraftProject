@@ -13,7 +13,8 @@ import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
 
 public class OpalShovel extends ShovelItem {
-
+	
+	public static final String name = "opal_shovel";
 	private static IItemTier tier = ModItemTier.OPAL;
 	private static int attackDamage = 0;
 	private static float attackSpeed = -3.2f;
@@ -21,7 +22,6 @@ public class OpalShovel extends ShovelItem {
 	
 	public OpalShovel() {
 		super(tier, attackDamage, attackSpeed, props);
-		setRegistryName("opal_shovel");
 	}
 
 	@Override

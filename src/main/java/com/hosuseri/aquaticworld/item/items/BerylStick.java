@@ -6,10 +6,11 @@ import net.minecraft.item.Item;
 
 public class BerylStick extends Item {
 
-private static Item.Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance);
+	private static Item.Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance);
+	
+	public static final String name = "beryl_stick";
 	
 	public BerylStick() {
 		super(props);
-		setRegistryName("beryl_stick");
 	}
 }

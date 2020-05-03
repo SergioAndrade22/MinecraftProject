@@ -10,10 +10,9 @@ public class AquamarineLeggings extends ArmorItem {
 	private static ModArmorMaterial material = ModArmorMaterial.AQUAMARINE;
 	private static EquipmentSlotType slot = EquipmentSlotType.LEGS;
 	private static Properties props = new Properties().group(AquaticWorldItemGroup.instance);
-	private static final String name = "aquamarine_leggings";
+	public static final String name = "aquamarine_leggings";
 	
 	public AquamarineLeggings() {
 		super(material, slot, props);
-		setRegistryName(name);
 	}
 }

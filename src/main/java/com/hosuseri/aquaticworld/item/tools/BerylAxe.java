@@ -8,15 +8,14 @@ import net.minecraft.item.Item;
 
 public class BerylAxe extends AxeItem {
 
+	public static final String name = "beryl_axe";
 	private static IItemTier tier = ModItemTier.BERYL;
 	private static int attackDamage = 14;
 	private static float attackSpeed = -2.1f;
 	private static Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance).maxStackSize(1);
-	
 
 	public BerylAxe() {
 		super(tier, attackDamage, attackSpeed, props);
-		setRegistryName("beryl_axe");
 	}
 	
 }

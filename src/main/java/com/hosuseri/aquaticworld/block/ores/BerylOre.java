@@ -19,11 +19,10 @@ public class BerylOre extends Block {
 
 	private static Block.Properties props = Block.Properties.create(Material.ROCK).hardnessAndResistance(6f, 15f).sound(SoundType.STONE).harvestLevel(4).harvestTool(ToolType.PICKAXE);
 	private BlockItem item;
-	private final String name = "beryl_ore";
+	public static final String name = "beryl_ore";
 	
 	public BerylOre() {
 		super(props);
-		setRegistryName(name);
 		
 		Item.Properties item_props = new Item.Properties();
 		item_props.maxStackSize(64);

@@ -62,5 +62,7 @@
 	
 	"block.aquaticworld.aquamarine_ore": "Aquamarine Ore",
 	"block.aquaticworld.beryl_ore": "Beryl Ore",
-	"block.aquaticworld.opal_ore": "Opal Ore"
+	"block.aquaticworld.opal_ore": "Opal Ore",
+	
+	"block.aquaticworld.quarry_block": "Quarry"
 }

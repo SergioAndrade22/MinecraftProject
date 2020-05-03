@@ -10,10 +10,9 @@ public class AquamarineHelmet extends ArmorItem {
 	private static ModArmorMaterial material = ModArmorMaterial.AQUAMARINE;
 	private static EquipmentSlotType slot = EquipmentSlotType.HEAD;
 	private static Properties props = new Properties().group(AquaticWorldItemGroup.instance);
-	private static final String name = "aquamarine_helmet";
+	public static final String name = "aquamarine_helmet";
 	
 	public AquamarineHelmet() {
 		super(material, slot, props);
-		setRegistryName(name);
 	}
 }

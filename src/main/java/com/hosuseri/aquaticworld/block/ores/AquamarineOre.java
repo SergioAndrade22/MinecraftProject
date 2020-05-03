@@ -19,11 +19,10 @@ public class AquamarineOre extends Block {
 
 	private static Block.Properties props = Block.Properties.create(Material.ROCK).hardnessAndResistance(4f, 10f).sound(SoundType.STONE).harvestLevel(3).harvestTool(ToolType.PICKAXE);
 	private BlockItem item;
-	private final String name = "aquamarine_ore";
+	public static final String name = "aquamarine_ore";
 	
 	public AquamarineOre() {
 		super(props);
-		setRegistryName(name);
 		
 		Item.Properties item_props = new Item.Properties();
 		item_props.maxStackSize(64);

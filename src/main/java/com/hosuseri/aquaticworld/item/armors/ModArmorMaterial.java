@@ -1,7 +1,7 @@
 package com.hosuseri.aquaticworld.item.armors;
 
 import com.hosuseri.aquaticworld.AquaticWorld;
-import com.hosuseri.aquaticworld.item.items.ItemList;
+import com.hosuseri.aquaticworld.item.ItemInit;
 
 import java.util.function.Supplier;
 
@@ -18,13 +18,13 @@ public enum ModArmorMaterial implements IArmorMaterial {
 
 	//MOD_ID + ":name for the layers", damage factor, damage reduction for each part of the armor{boots, leggings, chestplate, helmet}, enchantability, sound, toughness
 	AQUAMARINE(AquaticWorld.MOD_ID + ":aquamarine", 38, new int[]{5, 8, 10, 6}, 15, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 5f, () ->{
-		return Ingredient.fromItems(ItemList.aquamarine);
+		return Ingredient.fromItems(ItemInit.AQUAMARINE.get());
 	}),
 	BERYL(AquaticWorld.MOD_ID + ":beryl", 45, new int[]{8, 11, 13, 9}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 8f, () ->{
-		return Ingredient.fromItems(ItemList.beryl);
+		return Ingredient.fromItems(ItemInit.BERYL.get());
 	}),
 	OPAL(AquaticWorld.MOD_ID + ":opal", 52, new int[]{11, 14, 16, 12}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 11f, () ->{
-		return Ingredient.fromItems(ItemList.opal);
+		return Ingredient.fromItems(ItemInit.OPAL.get());
 	});
 	
 	private static final int[] MAX_DAMAGE_ARRAY = new int[] {12, 14, 16, 11};

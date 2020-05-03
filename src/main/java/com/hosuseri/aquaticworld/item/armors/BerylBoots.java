@@ -10,10 +10,9 @@ public class BerylBoots extends ArmorItem {
 	private static ModArmorMaterial material = ModArmorMaterial.BERYL;
 	private static EquipmentSlotType slot = EquipmentSlotType.FEET;
 	private static Properties props = new Properties().group(AquaticWorldItemGroup.instance);
-	private static final String name = "beryl_boots";
+	public static final String name = "beryl_boots";
 	
 	public BerylBoots() {
 		super(material, slot, props);
-		setRegistryName(name);
 	}
 }

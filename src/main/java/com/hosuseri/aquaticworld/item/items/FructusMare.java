@@ -11,9 +11,10 @@ public class FructusMare extends Item {
 	
 	private static Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance).food(createBuilder().build());
 	
+	public static final String name = "fructus_mare";
+	
 	public FructusMare() {
 		super(props);
-		setRegistryName("fructus_mare");
 	}
 			
 	private static Food.Builder createBuilder(){

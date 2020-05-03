@@ -3,6 +3,7 @@ package com.hosuseri.aquaticworld;
 import com.hosuseri.aquaticworld.block.BlockInit;
 import com.hosuseri.aquaticworld.item.ItemInit;
 import com.hosuseri.aquaticworld.tileentity.ModTileEntityTypes;
+import com.hosuseri.aquaticworld.util.ClientEventBusSubscriber;
 import com.hosuseri.aquaticworld.world.gen.OreGen;
 
 import net.minecraft.item.Item;
@@ -42,17 +43,19 @@ public class AquaticWorld{
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
     	final IForgeRegistry<Item> registry = event.getRegistry();
     	
-    	BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block ->{
+    	BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
     		registry.register(block.asItem());
     	});
     }
 
+    
+    
     private void setup(final FMLCommonSetupEvent event){
     	
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-    	
+    	ClientEventBusSubscriber.clientSetup(event);
     }
 
     @SubscribeEvent

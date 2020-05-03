@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_top",
+    "textures": {
+        "bottom": "aquaticworld:block/water_stone_door_bottom",
+        "top": "aquaticworld:block/water_stone_door_top"
+    }
+}

@@ -1,0 +1,8 @@
+{
+	"parent": "block/slab_top",
+	"textures": {
+		"bottom": "aquaticworld:block/water_cobblestone",
+        "top": "aquaticworld:block/water_cobblestone",
+        "side": "aquaticworld:block/water_cobblestone"
+	}
+}

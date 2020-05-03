@@ -54,7 +54,22 @@
 	"item.aquaticworld.poseidon_trident": "Poseidon's Trident",
 	
 	"block.aquaticworld.water_stone": "Water Stone",
+	"block.aquaticworld.water_stone_fence": "Water Stone Fence",
+	"block.aquaticworld.water_stone_fence_gate": "Water Stone Fence Gate",
+	"block.aquaticworld.water_stone_button": "Water Stone Button",
+	"block.aquaticworld.water_stone_stairs": "Water Stone Stairs",
+	"block.aquaticworld.water_stone_door": "Water Stone Door",
+	"block.aquaticworld.water_stone_slab": "Water Stone Slab",
+	"block.aquaticworld.water_stone_pressure_plate": "Water Stone Pressure Plate",
+	
 	"block.aquaticworld.water_cobblestone": "Water Cobblestone",
+	"block.aquaticworld.water_cobblestone_fence": "Water Cobblestone Fence",
+	"block.aquaticworld.water_cobblestone_fence_gate": "Water Cobblestone Fence Gate",
+	"block.aquaticworld.water_cobblestone_button": "Water Cobblestone Button",
+	"block.aquaticworld.water_cobblestone_stairs": "Water Cobblestone Stairs",
+	"block.aquaticworld.water_cobblestone_door": "Water Cobblestone Door",
+	"block.aquaticworld.water_cobblestone_slab": "Water Cobblestone Slab",
+	"block.aquaticworld.water_cobblestone_pressure_plate": "Water Cobblestone Pressure Plate",
 	
 	"block.aquaticworld.aquamarine_block": "Aquamarine Block",
 	"block.aquaticworld.beryl_block": "Beryl Block",

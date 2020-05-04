@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"sws",
+		"sws"
+	],
+	"key":{
+		"w":{ "item": "aquaticworld:water_stone" },
+		"s": { "item": "aquaticworld:water_stone_slab" }
+	},
+	"result":{ 
+		"item": "aquaticworld:water_stone_fence_gate", 
+		"count": 2
+	}	
+}

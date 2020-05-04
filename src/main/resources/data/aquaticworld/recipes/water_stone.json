@@ -1,8 +1,0 @@
-{
-	"type": "minecraft:crafting_shapeless",
-	"ingredients":[
-		{"item": "aquaticworld:water_cobblestone"},
-		{"item": "minecraft:kelp"}
-	],
-	"result": { "item": "aquaticworld:water_stone" }
-}

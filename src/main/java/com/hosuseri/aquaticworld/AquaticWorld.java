@@ -5,6 +5,7 @@ import com.hosuseri.aquaticworld.item.ItemInit;
 import com.hosuseri.aquaticworld.tileentity.ModTileEntityTypes;
 import com.hosuseri.aquaticworld.util.ClientEventBusSubscriber;
 import com.hosuseri.aquaticworld.world.biome.BiomeInit;
+import com.hosuseri.aquaticworld.world.dimension.DimensionInit;
 import com.hosuseri.aquaticworld.world.gen.OreGen;
 
 import net.minecraft.item.Item;
@@ -38,6 +39,7 @@ public class AquaticWorld{
         BlockInit.BLOCKS.register(modEventBus);
         ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
         BiomeInit.BIOMES.register(modEventBus);
+        DimensionInit.MOD_DIMENSIONS.register(modEventBus);
         
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -60,7 +62,6 @@ public class AquaticWorld{
     public static void onRegisterBiomes(final RegistryEvent<Biome> event) {
     	BiomeInit.registerBiomes();
     }
-    
     
     private void setup(final FMLCommonSetupEvent event){
     	

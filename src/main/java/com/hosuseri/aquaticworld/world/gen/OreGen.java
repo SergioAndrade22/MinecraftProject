@@ -19,9 +19,9 @@ public class OreGen {
 	private static OreFeatureConfig opal_config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.OPAL_ORE.get().getDefaultState(), 3);
 
 	// CountRangeConfig(how common it is 20 is more common than coal, from 0 how many blocks above, from world height how many blocks below, maximum height can generate - top offset)
-	private static ConfiguredPlacement<?> aquamarine_placement = Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 5, 10, 62));
-	private static ConfiguredPlacement<?> beryl_placement = Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 5, 10, 46));
-	private static ConfiguredPlacement<?> opal_placement = Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 5, 10, 26));
+	private static ConfiguredPlacement<?> aquamarine_placement = Placement.COUNT_RANGE.configure(new CountRangeConfig(16, 5, 10, 62));
+	private static ConfiguredPlacement<?> beryl_placement = Placement.COUNT_RANGE.configure(new CountRangeConfig(10, 5, 10, 46));
+	private static ConfiguredPlacement<?> opal_placement = Placement.COUNT_RANGE.configure(new CountRangeConfig(5, 5, 10, 26));
 	
 	// ore and structures = feature
 	public static void generateOre() {

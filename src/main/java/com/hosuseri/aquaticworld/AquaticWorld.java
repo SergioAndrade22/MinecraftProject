@@ -4,9 +4,11 @@ import com.hosuseri.aquaticworld.block.BlockInit;
 import com.hosuseri.aquaticworld.item.ItemInit;
 import com.hosuseri.aquaticworld.tileentity.ModTileEntityTypes;
 import com.hosuseri.aquaticworld.util.ClientEventBusSubscriber;
+import com.hosuseri.aquaticworld.world.biome.BiomeInit;
 import com.hosuseri.aquaticworld.world.gen.OreGen;
 
 import net.minecraft.item.Item;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -35,6 +37,7 @@ public class AquaticWorld{
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
+        BiomeInit.BIOMES.register(modEventBus);
         
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -48,6 +51,15 @@ public class AquaticWorld{
     	});
     }
 
+    @SubscribeEvent
+    public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
+    	OreGen.generateOre();
+    }
+
+    @SubscribeEvent
+    public static void onRegisterBiomes(final RegistryEvent<Biome> event) {
+    	BiomeInit.registerBiomes();
+    }
     
     
     private void setup(final FMLCommonSetupEvent event){
@@ -58,11 +70,6 @@ public class AquaticWorld{
     	ClientEventBusSubscriber.clientSetup(event);
     }
 
-    @SubscribeEvent
-    public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
-    	OreGen.generateOre();
-    }
-    
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
     	

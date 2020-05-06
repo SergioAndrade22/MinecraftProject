@@ -26,7 +26,7 @@ public class BlockInit {
 	
 	public static final RegistryObject<Block> OPAL_BLOCK = BLOCKS.register(OpalBlock.name, () -> new OpalBlock());
 	
-	public static final RegistryObject<Block> QUARRY = BLOCKS.register(BlockQuarry.name, () -> new BlockQuarry());
+	public static final RegistryObject<Block> QUARRY = BLOCKS.register(QuarryBlock.name, () -> new QuarryBlock());
 	
 	public static final RegistryObject<Block> WATER_STONE = BLOCKS.register(WaterStone.name, () -> new WaterStone());
 	

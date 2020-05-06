@@ -13,13 +13,13 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockReader;
 import net.minecraftforge.common.ToolType;
 
-public class BlockQuarry extends Block {
+public class QuarryBlock extends Block {
 
 	private static Properties props = Block.Properties.create(Material.SAND).hardnessAndResistance(4f, 7.0f).sound(SoundType.SAND).harvestTool(ToolType.SHOVEL).harvestLevel(1);
 	private BlockItem item; 
 	public static final String name = "quarry_block";
 	
-	public BlockQuarry() {
+	public QuarryBlock() {
 		super(props);
 		
 		Item.Properties item_props = new Item.Properties();

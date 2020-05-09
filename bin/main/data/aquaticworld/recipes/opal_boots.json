@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"o o",
+		"o o"
+	],
+	"key":{
+		"o":{ "item": "aquaticworld:opal" }
+	},
+	"result":{ "item": "aquaticworld:opal_boots" }
+}

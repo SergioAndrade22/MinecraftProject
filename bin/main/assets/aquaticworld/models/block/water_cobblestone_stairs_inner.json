@@ -1,0 +1,8 @@
+{
+	"parent": "block/inner_stairs",
+	"textures": {
+		"bottom": "aquaticworld:block/water_cobblestone",
+        "top": "aquaticworld:block/water_cobblestone",
+        "side": "aquaticworld:block/water_cobblestone"
+	}
+}

@@ -5,6 +5,7 @@ import java.util.List;
 import com.hosuseri.aquaticworld.util.AquaticWorldItemGroup;
 import com.hosuseri.aquaticworld.util.KeyboardHelper;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.LightningBoltEntity;
@@ -17,6 +18,8 @@ import net.minecraft.potion.Effects;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.CooldownTracker;
 import net.minecraft.util.Hand;
+import net.minecraft.util.math.RayTraceContext;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
@@ -29,6 +32,7 @@ public class PoseidonTrident extends TridentItem {
 	private static Properties props = new Item.Properties().group(AquaticWorldItemGroup.instance).maxDamage(15).setNoRepair();
 	private CooldownTracker lightning_cooldown = new CooldownTracker();
 	private CooldownTracker regeneration_cooldown = new CooldownTracker();
+	private Minecraft mc = Minecraft.getInstance();
 	
 	public PoseidonTrident() {
 		super(props);
@@ -46,7 +50,7 @@ public class PoseidonTrident extends TridentItem {
 												+ "R_click on target: cast a lightning on them"));
 		}
 		else {
-			tooltip.add(new StringTextComponent("Current lightning cooldown: " + Math.round(lightning_cooldown.getCooldown(this, 0) * 100) + "s \n"
+			tooltip.add(new StringTextComponent("Current lightning cooldown: " + lightning_cooldown.getCooldown(this, 0) / 10 + "s \n"
 												+ "Current regeneration cooldown: " + regeneration_cooldown.getCooldown(this, 0) / 10 + "s \n"
 												+ "Hold" + "\u00A7e" + " shift " + "\u00A77" + "for more information"));
 		}
@@ -69,11 +73,13 @@ public class PoseidonTrident extends TridentItem {
 			regeneration_cooldown.setCooldown(this, 1200);
 		}
 		else {
-		    if (!worldIn.isRemote && !lightning_cooldown.hasCooldown(this)) {
-		    	ServerWorld server = (ServerWorld) worldIn;
-	    	    Vec3d player_look = playerIn.getLookVec();
+		    if (!worldIn.isRemote && !lightning_cooldown.hasCooldown(this) && mc.objectMouseOver != null && mc.getRenderViewEntity() != null) {
+		    	ServerWorld server = (ServerWorld) worldIn;	
+		    	Entity viewpoint = mc.getRenderViewEntity();
+		    	
+		    	Vec3d target = this.rayTrace(viewpoint, mc.playerController.getBlockReachDistance(), 0).getHitVec();
 
-	    	    LightningBoltEntity bolt = new LightningBoltEntity(worldIn, playerIn.getPosX() + player_look.x, playerIn.getPosY() + player_look.y, playerIn.getPosZ() + player_look.z, false);
+	    	    LightningBoltEntity bolt = new LightningBoltEntity(worldIn, target.x, target.y, target.z, false);
 	    	    server.addLightningBolt(bolt);
 	    	    
 	    	    lightning_cooldown.setCooldown(this, 400);
@@ -81,4 +87,14 @@ public class PoseidonTrident extends TridentItem {
 		}
 		return super.onItemRightClick(worldIn, playerIn, handIn);
 	}
+	
+	public RayTraceResult rayTrace(Entity entity, double playerReach, float partialTicks) {
+        Vec3d eyePosition = entity.getEyePosition(partialTicks);
+        Vec3d lookVector = entity.getLook(partialTicks);
+        Vec3d traceEnd = eyePosition.add(lookVector.x * playerReach, lookVector.y * playerReach, lookVector.z * playerReach);
+
+        RayTraceContext.FluidMode fluidView = RayTraceContext.FluidMode.NONE;
+        RayTraceContext context = new RayTraceContext(eyePosition, traceEnd, RayTraceContext.BlockMode.OUTLINE, fluidView, entity);
+        return entity.getEntityWorld().rayTraceBlocks(context);
+    }
 }

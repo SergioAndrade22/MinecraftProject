@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"p",
+		"p"
+	],
+	"key":{
+		"p":{ "item": "minecraft:prismarine_shard" }
+	},
+	"result":{ "item": "aquaticworld:prismarine_stick" }
+}

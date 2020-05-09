@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [ { "item": "aquaticworld:opal_block" } ],
+	"result":{
+		"item": "aquaticworld:opal",
+		"count": 9
+	}
+}

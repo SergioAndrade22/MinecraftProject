@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"  w",
+		" ww",
+		"www"
+	],
+	"key":{
+		"w":{ "item": "aquaticworld:water_stone" }
+	},
+	"result":{ 
+		"item": "aquaticworld:water_stone_stairs", 
+		"count": 4
+	}	
+}

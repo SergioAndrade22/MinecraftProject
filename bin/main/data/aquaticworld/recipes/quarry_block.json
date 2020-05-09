@@ -1,0 +1,27 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"rdr",
+		"aob"
+	],
+	"key": {
+		"r": {
+			"item": "minecraft:redstone_block"
+		},
+		"d": {
+			"item": "minecraft:dispenser"
+		},
+		"a": {
+			"item": "aquaticworld:aquamarine_block"
+		},
+		"o": {
+			"item": "aquaticworld:opal_block"
+		},
+		"b": {
+			"item": "aquaticworld:beryl_block"
+		}
+	},
+	"result": {
+		"item": "aquaticworld:quarry_block"
+	}
+}

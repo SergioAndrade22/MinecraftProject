@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"b",
+		"b"
+	],
+	"key":{
+		"b":{ "item": "aquaticworld:beryl" }
+	},
+	"result":{ "item": "aquaticworld:beryl_stick" }
+}

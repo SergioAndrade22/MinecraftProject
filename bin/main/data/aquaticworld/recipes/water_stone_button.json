@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [{ "item": "aquaticworld:water_stone" }],
+	"result":{
+		"item": "aquaticworld:water_stone_button",
+		"count": 2
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"o o",
+		"ooo",
+		"ooo"
+	],
+	"key":{
+		"o":{ "item": "aquaticworld:opal" }
+	},
+	"result":{ "item": "aquaticworld:opal_chestplate" }
+}

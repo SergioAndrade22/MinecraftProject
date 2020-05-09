@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"www"
+	],
+	"key":{
+		"w":{ "item": "aquaticworld:water_cobblestone" }
+	},
+	"result":{ 
+		"item": "aquaticworld:water_cobblestone_slab",
+		"count": 6			
+	}	
+}

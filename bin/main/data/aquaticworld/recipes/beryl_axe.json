@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"aa",
+		"as",
+		" s"
+	],
+	"key":{
+		"a":{ "item": "aquaticworld:beryl" },
+		"s":{ "item": "aquaticworld:aquamarine_stick" }
+	},
+	"result":{ "item": "aquaticworld:beryl_axe" }
+}
